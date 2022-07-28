@@ -1,27 +1,32 @@
 
 function alwaysHungry(arr) {
-    var yummy = "yummy";
-    var hungry = "Im hungry";
+
+    var yummy = [];
+    var hungry = [];
 
     for(var i = 0; i < arr.length; i++){
-        if(arr[i] == "food"){
-            // console.log("yummy")
-            return yummy;
-        }else if(arr[i] !== "food") {
-            // console.log("Im hungry")
+        
+        for(var j = 0; j < arr.length; j++){
 
-            return hungry;
+            if(arr[i] == "food"){
+                // console.log("yummy")
+                return yummy;
+            }else if(arr[i] !== "food") {
+                // console.log("Im hungry")
+                
+                return hungry;
+            }
+            
         }
-
     } 
 
 }
 
 alwaysHungry([3.14, "food", "pie", true, "food"]);
 // this should console log "yummy", "yummy"
-// console.log(yummy);
-console.log(alwaysHungry);
+console.log(yummy);
+// console.log(alwaysHungry);
 
 alwaysHungry([4, 1, 5, 7, 2]);
 // this should console log "I'm hungry"
-// console.log(hungry);
+console.log(hungry);
